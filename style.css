@@ -58,6 +58,10 @@ body, html {
   display: inline-block;
 }
 
+.icons {
+  margin-bottom: 20px;
+}
+
 .icons i {
   margin: 0 10px;
   font-size: 1.5rem;
@@ -68,4 +72,57 @@ body, html {
 .icons i:hover {
   color: rgb(0, 255, 255);
   transform: scale(1.2);
+}
+
+/* 🔊 Glowing Sound Button Wrapper (Centered under icons) */
+.sound-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* space between icons and button */
+}
+
+/* 🌟 Glowing Button */
+.glow-button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+/* 💫 Glow Effect */
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #44c4ff, transparent 70%);
+  animation: pulseGlow 2s infinite;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.glow-button:hover {
+  color: #ffffff;
 }

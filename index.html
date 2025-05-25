@@ -10,7 +10,7 @@
 <body>
 
   <!-- 🎥 Background Video -->
-  <video autoplay loop playsinline class="background-video">
+  <video id="myVideo" autoplay loop muted playsinline class="background-video">
     <source src="background.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -19,28 +19,42 @@
   <div class="profile-card">
     <img src="avatar.jpeg" alt="Avatar" class="avatar"/>
     <h2 class="username">J I N X</h2>
-    <p class="tagline">"LET THE LION LIE-WAKE IT, AND WE DIE"</p>
+    <p class="tagline">"LET THE LION LIE - WAKE IT, AND WE DIE"</p>
     <div class="bio">I AM A GRAPHIC DESIGNER</div>
 
+    <!-- 🌐 Social Icons -->
     <div class="icons">
-  <a href="https://discord.gg/nFJBRHUNqh" target="_blank" title="Discord">
-    <i class="fab fa-discord"></i>
-  </a>
+      <a href="https://discord.gg/nFJBRHUNqh" target="_blank" title="Discord">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://www.instagram.com/_kishore_official_1/?__pwa=1#" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" title="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="mailto:kishore56234@gmail.com" title="Email Me">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
 
-  <a href="https://www.instagram.com/_kishore_official_1/?__pwa=1#" target="_blank" title="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" title="Telegram">
-    <i class="fab fa-telegram"></i>
-  </a>
-
-  <a href="kishore56234@gmail.com" title="Email Me">
-    <i class="fas fa-envelope"></i>
-  </a>
+    <!-- 🔊 Glowing Sound Button -->
+<div class="sound-button-wrapper">
+  <button id="soundButton" class="glow-button">PLAY SOUND</button>
 </div>
 
   </div>
+
+ <script>
+  const video = document.getElementById("myVideo");
+  const soundButton = document.getElementById("soundButton");
+
+  soundButton.addEventListener("click", () => {
+    video.muted = false;
+    video.play();
+    soundButton.style.display = "none"; // Optional
+  });
+</script>
 
 </body>
 </html>
