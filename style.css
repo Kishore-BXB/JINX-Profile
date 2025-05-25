@@ -1,0 +1,71 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 🎥 Video background */
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* 👤 Profile Card Overlay */
+.profile-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 221);
+  margin-bottom: 10px;
+}
+
+.username {
+  font-size: 2rem;
+  color: rgb(0, 195, 255);
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.bio {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.icons i {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: rgb(0, 255, 255);
+  transform: scale(1.2);
+}
